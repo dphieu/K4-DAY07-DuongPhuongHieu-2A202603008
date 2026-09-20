@@ -1,0 +1,135 @@
+======================================================================
+BENCHMARK — Chính sách đổi trả, bảo hành Shopee Việt Nam
+======================================================================
+Embedding backend: MockEmbedder (hash-based, no semantics)
+
+Loaded 30 chunks from 6 files
+
+----------------------------------------------------------------------
+Query 1: Người mua có bao nhiêu ngày để gửi yêu cầu trả hàng trên Shopee?
+Gold Answer: 15 ngày đối với Shopee Mall; 3 ngày (tối đa 7 ngày) đối với Shop Yêu thích hoặc Shop thông thường kể từ ngày nhận hàng
+Expected Doc: shopee-return-refund-buyer
+
+Top-3 Results:
+  [1] score=0.2639 doc_id=tiki-warranty-policy-buyer#3
+      ## 3. Các trường hợp từ chối bảo hành Tiki và hãng sản xuất có quyền từ chối bảo hành miễn phí nếu phát hiện một trong c...
+  [2] score=0.1938 doc_id=prohibited-returns-policy#0
+      # Danh mục Sản phẩm Ngoại lệ Không áp dụng Đổi trả và Hoàn tiền  ## 1. Nguyên tắc chung về sản phẩm ngoại lệ Nhằm bảo vệ...
+  [3] score=0.1782 doc_id=prohibited-returns-policy#2
+      - Nhóm 3 - Dược phẩm và thực phẩm chức năng: Thuốc không kê đơn, thực phẩm bảo vệ sức khỏe, sữa công thức em bé đã bị mở...
+
+  Keywords found in context: []
+  Score: 0/2
+
+----------------------------------------------------------------------
+Query 2: Những nhóm sản phẩm nào thuộc danh mục ngoại lệ không áp dụng đổi trả và hoàn tiền?
+Gold Answer: Đồ lót/đồ bơi bóc seal, thực phẩm tươi sống, dược phẩm/sữa công thức mở nắp, và sản phẩm số/thẻ cào điện tử
+Expected Doc: prohibited-returns-policy
+
+Top-3 Results:
+  [1] score=0.2285 doc_id=lazada-return-policy-buyer#0
+      # Chính sách Đổi trả và Hoàn tiền Lazada dành cho Người mua...
+  [2] score=0.1829 doc_id=shopee-return-refund-buyer#1
+      ## 1. Thời hạn yêu cầu Trả hàng/Hoàn tiền Người mua có thể gửi yêu cầu Trả hàng/Hoàn tiền trong khoảng thời gian quy địn...
+  [3] score=0.1797 doc_id=shopee-warranty-seller#5
+      ## 3. Chế tài xử phạt vi phạm chính sách - Người bán từ chối nghĩa vụ bảo hành hợp lệ của người mua sẽ bị trừ điểm đánh ...
+
+  Keywords found in context: []
+  Score: 0/2
+
+----------------------------------------------------------------------
+Query 3: Người bán trên Shopee phải phản hồi yêu cầu trả hàng trong bao lâu và nếu quá hạn thì sao?
+Gold Answer: Người bán có tối đa 48 giờ để phản hồi; quá 48 giờ Shopee sẽ tự động chấp thuận hoàn tiền toàn bộ cho Người mua
+Expected Doc: shopee-warranty-seller
+Filter: {'audience': 'seller'}
+
+Top-3 Results:
+  [1] score=0.1449 doc_id=tiktok-shop-seller-dispute#2
+      - Video quay quá trình mở bưu kiện hoàn trả (Unboxing): Thể hiện rõ 6 mặt của hộp hàng, mã bưu vận đơn hoàn về còn nguyê...
+  [2] score=0.1156 doc_id=tiktok-shop-seller-dispute#0
+      # Quy định Xử lý Tranh chấp Hoàn tiền và Đổi trả cho Nhà bán hàng TikTok Shop  ## 1. Quyền khiếu nại quyết định hoàn tiề...
+  [3] score=0.1118 doc_id=tiktok-shop-seller-dispute#1
+      ## 2. Yêu cầu về hồ sơ bằng chứng hợp lệ Để khiếu nại được xét duyệt thành công, Nhà bán hàng bắt buộc phải cung cấp đầy...
+
+  Keywords found in context: ['48 giờ', 'tự động', 'hoàn tiền']
+  Score: 0/2
+
+----------------------------------------------------------------------
+Query 4: Tiki hỗ trợ những phương thức bảo hành thiết bị điện tử nào và thời gian xử lý là bao lâu?
+Gold Answer: Bảo hành tại Trung tâm Bảo hành của Hãng hoặc gửi qua Tiki tiếp nhận tận nhà (thời gian xử lý 7 đến 14 ngày làm việc)
+Expected Doc: tiki-warranty-policy-buyer
+
+Top-3 Results:
+  [1] score=0.1959 doc_id=lazada-return-policy-buyer#1
+      ## 1. Thời hạn đổi trả hàng theo kênh bán lẻ Lazada quy định thời hạn gửi yêu cầu đổi trả hàng khác biệt theo phân loại ...
+  [2] score=0.1942 doc_id=prohibited-returns-policy#2
+      - Nhóm 3 - Dược phẩm và thực phẩm chức năng: Thuốc không kê đơn, thực phẩm bảo vệ sức khỏe, sữa công thức em bé đã bị mở...
+  [3] score=0.1597 doc_id=lazada-return-policy-buyer#3
+      ## 3. Quy trình và thời gian giải ngân tiền hoàn - Người mua gửi yêu cầu hoàn hàng trên ứng dụng Lazada, in hoặc ghi mã ...
+
+  Keywords found in context: []
+  Score: 0/2
+
+----------------------------------------------------------------------
+Query 5: Nhà bán hàng TikTok Shop cần cung cấp những bằng chứng gì khi khiếu nại quyết định hoàn tiền?
+Gold Answer: Bộ ba chứng cứ: Video đóng gói kiện hàng ban đầu, video unboxing mở bưu kiện hoàn trả 6 mặt hộp, và biên bản đồng kiểm có chữ ký nhân viên giao nhận
+Expected Doc: tiktok-shop-seller-dispute
+Filter: {'audience': 'seller'}
+
+Top-3 Results:
+  [1] score=0.2151 doc_id=shopee-warranty-seller#0
+      # Quy định Trách nhiệm Bảo hành và Xử lý Khiếu nại dành cho Người bán Shopee...
+  [2] score=0.1329 doc_id=tiktok-shop-seller-dispute#2 ✓ RELEVANT
+      - Video quay quá trình mở bưu kiện hoàn trả (Unboxing): Thể hiện rõ 6 mặt của hộp hàng, mã bưu vận đơn hoàn về còn nguyê...
+  [3] score=0.0542 doc_id=shopee-warranty-seller#4
+      - Nếu quá 48 giờ mà Người bán không đưa ra phản hồi, hệ thống Shopee sẽ tự động xử lý chấp thuận hoàn tiền toàn bộ cho N...
+
+  Keywords found in context: ['Video', 'đồng kiểm']
+  Score: 1/2
+
+======================================================================
+A/B TEST — Query 3: Có filter vs. Không filter
+======================================================================
+
+[A] Không dùng metadata_filter:
+  [1] doc_id=shopee-return-refund-buyer#5 audience=buyer score=0.2677
+  [2] doc_id=tiki-warranty-policy-buyer#0 audience=buyer score=0.2156
+  [3] doc_id=lazada-return-policy-buyer#2 audience=buyer score=0.1495
+
+[B] Dùng metadata_filter={'audience': 'seller'}:
+  [1] doc_id=tiktok-shop-seller-dispute#2 audience=seller score=0.1449
+  [2] doc_id=tiktok-shop-seller-dispute#0 audience=seller score=0.1156
+  [3] doc_id=tiktok-shop-seller-dispute#1 audience=seller score=0.1118
+
+  [A] Has seller docs in top-3: False
+  [B] All seller docs in top-3: True
+  Filter giúp loại bỏ tài liệu buyer khỏi kết quả: Có
+
+======================================================================
+TỔNG KẾT
+======================================================================
+Tổng điểm: 1/10
+
+======================================================================
+PHÂN TÍCH LỖI (FAILURE CASE)
+======================================================================
+
+Failure Case: MockEmbedder không mã hóa ngữ nghĩa
+
+Mô tả: MockEmbedder sử dụng băm MD5 để sinh vector giả ngẫu nhiên,
+do đó điểm similarity giữa query và chunk KHÔNG phản ánh mức độ liên quan
+về nội dung. Kết quả top-3 gần như ngẫu nhiên.
+
+Biểu hiện cụ thể:
+- Chunk đúng chủ đề nhưng có thể xếp hạng thấp hơn chunk không liên quan.
+- Score có thể âm cho chunk chứa đáp án chính xác.
+- Cosine similarity đo ở đây thực chất là similarity giữa hash values,
+  không phải giữa ngữ nghĩa của văn bản.
+
+Đề xuất cải thiện:
+1. Sử dụng embedder thật (LocalEmbedder hoặc GeminiEmbedder) để có
+   vector ngữ nghĩa, giúp retrieval chính xác hơn.
+2. Với MockEmbedder, nên đánh giá dựa trên count/avg_length/tính mạch
+   lạc của chunk thay vì dựa vào score.
+3. Metadata filter vẫn hoạt động đúng ngay cả với MockEmbedder vì
+   filter dựa trên exact match, không phụ thuộc embedding.

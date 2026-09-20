@@ -4,6 +4,10 @@ import os
 import sys
 from pathlib import Path
 
+# Fix Windows console encoding
+if sys.stdout.encoding != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8")
+
 from dotenv import load_dotenv
 
 from src.agent import KnowledgeBaseAgent
@@ -21,10 +25,15 @@ from src.models import Document
 from src.store import EmbeddingStore
 
 SAMPLE_FILES = [
+    "data/ecommerce/shopee-return-refund-buyer.md",
+    "data/ecommerce/shopee-warranty-seller.md",
+    "data/ecommerce/lazada-return-policy-buyer.md",
+    "data/ecommerce/tiki-warranty-policy-buyer.md",
+    "data/ecommerce/tiktok-shop-seller-dispute.md",
+    "data/ecommerce/prohibited-returns-policy.md",
     "data/python_intro.txt",
     "data/vector_store_notes.md",
     "data/rag_system_design.md",
-    "data/customer_support_playbook.txt",
     "data/chunking_experiment_report.md",
     "data/vi_retrieval_notes.md",
 ]
